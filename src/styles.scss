@@ -7,21 +7,21 @@
 @include mat-core();
 
 
-$mat-wine: (
-  50 : #eee6e7,
-  100 : #d5c1c3,
-  200 : #b9979b,
-  300 : #9c6d73,
-  400 : #874e55,
-  500 : #722f37,
-  600 : #6a2a31,
-  700 : #5f232a,
-  800 : #551d23,
-  900 : #421216,
-  A100 : #ff7e87,
-  A200 : #ff4b58,
-  A400 : #ff1828,
-  A700 : #fd0012,
+$mat-brown: (
+  50 : #e8e5e5,
+  100 : #c5bebd,
+  200 : #9f9391,
+  300 : #786865,
+  400 : #5b4744,
+  500 : #3e2723,
+  600 : #38231f,
+  700 : #301d1a,
+  800 : #281715,
+  900 : #1b0e0c,
+  A100 : #ff6b5d,
+  A200 : #ff3d2a,
+  A400 : #f61600,
+  A700 : #dc1400,
   contrast: (
     50 : #000000,
     100 : #000000,
@@ -34,11 +34,12 @@ $mat-wine: (
     800 : #ffffff,
     900 : #ffffff,
     A100 : #000000,
-    A200 : #000000,
+    A200 : #ffffff,
     A400 : #ffffff,
     A700 : #ffffff,
   )
 );
+
 
 $mat-wood: (
   50 : #fff4ea,
@@ -73,7 +74,7 @@ $mat-wood: (
   )
 );
 //$primary: mat-palette($mat-indigo);
-$primary: mat-palette($mat-wine);
+$primary: mat-palette($mat-brown);
 
 $accent:  mat-palette($mat-wood, A200, A100, A400);
 

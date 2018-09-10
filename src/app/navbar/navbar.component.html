@@ -1,25 +1,46 @@
 <nav class="navbar-header">
+  <div class="navbar-show-small">
+    <button class="app-nav-menu-button" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" yPosition="below" [overlapTrigger]="true">
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>school</mat-icon>
+        <span>Education</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>library_books</mat-icon>
+        <span>Skills</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>person</mat-icon>
+        <span>Portfolio</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>contact_mail</mat-icon>
+        <span>Contact</span>
+      </button>
+    </mat-menu>
+  </div>
   <i class="material-icons nav-icon">
     home
   </i>
   <a mat-button class="app-button" routerLink="home">Home</a>
-  <div class="navbar-hide-small">
+  <div class="">
     <i class="material-icons nav-icon">
       school
     </i>
-    <a mat-button class="navbar-hide-small app-button" routerLink="education">Education</a>
+    <a mat-button class="app-button" routerLink="education">Education</a>
   </div>
-  <div class="navbar-hide-small">
+  <div class="">
     <i class="material-icons nav-icon">
       library_books
     </i>
-    <a mat-button class="navbar-hide-small app-button" routerLink="skills">Skills</a>
-  </div>
-  <div class="navbar-hide-small">
-    <i class="material-icons nav-icon">
-      contact_mail
-    </i>
-    <a mat-button class="navbar-hide-small app-button" routerLink="contact">Contact</a>
+    <a mat-button class="app-button" routerLink="skills">Skills</a>
   </div>
   <div class="navbar-hide-small">
     <i class="material-icons nav-icon">
@@ -27,29 +48,28 @@
     </i>
     <a mat-button class="navbar-hide-small app-button" routerLink="portfolio">Portfolio</a>
   </div>
-
-  <div class="flex-spacer"></div>
-
-  <i class="material-icons">
-    person
-  </i>
-  <a mat-button class="app-button" routerLink="login">Login</a>
-
-</nav>
-<nav class="navbar-header navbar-show-small">
-  <div>
-    <i class="material-icons nav-icon">
-      shopping_basket
-    </i>
-    <a mat-button class="app-button" routerLink="shop">Shop</a>
-  </div>
-  <div>
+  <div class="navbar-hide-small">
     <i class="material-icons nav-icon">
       contact_mail
     </i>
-    <a mat-button class="app-button" routerLink="contact">Contact</a>
+    <a mat-button class="navbar-hide-small app-button" routerLink="contact">Contact</a>
   </div>
 
-  <!--<div class="flex-spacer"></div>-->
-
 </nav>
+<!--<nav class="navbar-header navbar-show-small">-->
+  <!--<div>-->
+    <!--<i class="material-icons nav-icon">-->
+      <!--shopping_basket-->
+    <!--</i>-->
+    <!--<a mat-button class="app-button" routerLink="shop">Shop</a>-->
+  <!--</div>-->
+  <!--<div>-->
+    <!--<i class="material-icons nav-icon">-->
+      <!--contact_mail-->
+    <!--</i>-->
+    <!--<a mat-button class="app-button" routerLink="contact">Contact</a>-->
+  <!--</div>-->
+
+  <!--&lt;!&ndash;<div class="flex-spacer"></div>&ndash;&gt;-->
+
+<!--</nav>-->

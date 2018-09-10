@@ -2,7 +2,18 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 8px 16px;
+  padding: 8px 0;
+  justify-content: center;
+}
+.app-nav-menu-button{
+  text-align: left;
+}
+
+/*
+Make nav icon bigger
+*/
+mat-icon{
+  font-size: 36px;
 }
 
 .flex-spacer {
@@ -36,7 +47,6 @@
 
   .navbar-show-small {
     display: flex;
-    justify-content: space-between;
     margin: 0;
   }
 
