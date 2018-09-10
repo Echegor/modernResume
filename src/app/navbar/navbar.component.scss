@@ -1,0 +1,48 @@
+.navbar-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.nav-icon {
+  height: 26px;
+  margin: 0 0 3px 0;
+  vertical-align: middle;
+}
+
+
+.navbar-link {
+  text-decoration: inherit;
+  flex: 1;
+}
+
+.navbar-show-small {
+  display: none;
+}
+
+/**
+  * Rules for when the device is detected to be a small screen.
+  * Moves content two rows instead of one.
+  */
+@media (max-width: 720px) {
+  .navbar-hide-small {
+    display: none;
+  }
+
+  .navbar-show-small {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  //.navbar-show-small.button{
+  //  flex: 1;
+  //  text-align: center;
+  //}
+
+}
