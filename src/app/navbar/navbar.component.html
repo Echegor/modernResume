@@ -1,14 +1,14 @@
 <nav class="navbar-header">
   <div class="navbar-show-small">
-    <button class="app-nav-menu-button" mat-icon-button [matMenuTriggerFor]="menu">
+    <button (click)="rotate()" [@rotatedState]='state' class="app-nav-menu-button" mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
-    <mat-menu #menu="matMenu" yPosition="below" [overlapTrigger]="true">
+    <mat-menu #menu="matMenu" yPosition="below" [overlapTrigger]="false" (close)="rotate()">
       <button mat-menu-item>
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </button>
-      <button mat-menu-item disabled>
+      <button mat-menu-item>
         <mat-icon>school</mat-icon>
         <span>Education</span>
       </button>
@@ -26,17 +26,22 @@
       </button>
     </mat-menu>
   </div>
-  <i class="material-icons nav-icon">
-    home
-  </i>
-  <a mat-button class="app-button" routerLink="home">Home</a>
-  <div class="">
+  <div class="navbar-show-small">
+    <app-page-title></app-page-title>
+  </div>
+  <div class="navbar-hide-small">
+    <i class="material-icons nav-icon">
+      home
+    </i>
+    <a mat-button class="app-button" routerLink="home">Home</a>
+  </div>
+  <div class="navbar-hide-small">
     <i class="material-icons nav-icon">
       school
     </i>
     <a mat-button class="app-button" routerLink="education">Education</a>
   </div>
-  <div class="">
+  <div class="navbar-hide-small">
     <i class="material-icons nav-icon">
       library_books
     </i>

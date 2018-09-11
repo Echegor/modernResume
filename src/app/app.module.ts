@@ -17,6 +17,7 @@ import {ShopComponent} from './shop/shop.component';
 import {ContactComponent} from './contact/contact.component';
 import {SearchBarComponent} from './search-bar/search-bar.component';
 import {PageTitleComponent} from './page-title/page-title.component';
+import { AvatarComponent } from './avatar/avatar.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import {PageTitleComponent} from './page-title/page-title.component';
     ContactComponent,
     SearchBarComponent,
     PageTitleComponent,
+    AvatarComponent,
   ],
   imports: [
     BrowserModule,

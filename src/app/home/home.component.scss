@@ -11,9 +11,8 @@ $margin-promotion-sections-small: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: $margin-promotion-sections;
-  margin-bottom: 20px;
   height: 100vh;
+  background: #ffffff url("../../assets/images/dark_wood.jpg");
 }
 
 .header-headline {
@@ -59,7 +58,6 @@ $margin-promotion-sections-small: 15px;
 .homepage-row {
   display: flex;
   max-width: 920px;
-  margin: $margin-promotion-sections 0;
 }
 
 .homepage-row .wine-svg-image{
@@ -73,7 +71,6 @@ $margin-promotion-sections-small: 15px;
 .header-start,
 .homepage-bottom-start {
   text-align: center;
-  margin: $margin-promotion-sections 0;
 }
 
 .homepage-promo-img,
@@ -98,7 +95,6 @@ $margin-promotion-sections-small: 15px;
   */
 @media (max-width: 720px) {
   .header-section {
-    padding-top: $margin-promotion-sections-small;
   }
 
   .header-start,
