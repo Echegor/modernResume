@@ -32,6 +32,30 @@
     }
   }
 
+    /*
+  Scrollbar
+  */
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: mat-color($accent);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: mat-color($primary);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: mat-color($warn);
+  }
+
   .wine-footer {
     background: mat-color($primary);
     color: mat-color($primary, default-contrast);
