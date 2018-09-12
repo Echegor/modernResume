@@ -21,5 +21,13 @@
     .homepage-row {
       color: mat-color($foreground, secondary-text);
     }
+
+    .star-light mat-icon{
+      background: mat-color($primary);
+    }
+
+    h2 {
+      color: mat-color($primary, default-contrast);
+    }
   }
 }

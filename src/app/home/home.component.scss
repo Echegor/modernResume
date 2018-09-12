@@ -2,20 +2,66 @@
 $margin-promotion-sections: 60px;
 $margin-promotion-sections-small: 15px;
 
-.header-background {
-  overflow: hidden;
+.star-light {
+  max-width: 75%;
+  padding: 0;
+  text-align: center;
+  border: none #fff;
+  border-top: .3rem solid;
+  margin: 2.5rem auto auto;
+  color: #ffffff;
 }
 
-.header-section {
+.star-light mat-icon{
+  position: relative;
+  top: -.65em;
+  display: inline-block;
+  padding: 0 .25em;
+  font-weight: 900;
+  font-size: 2em;
+  color: #ffffff;
+  width: inherit;
+}
+
+
+.header-background {
+  overflow: hidden;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background: #ffffff url("../../assets/images/dark_wood.jpg");
+  //height: 100vh; //removed as it did not play nice in different backgrounds
+  //background: #ffffff url("../../assets/images/dark_wood.jpg");
+}
+
+.header-footer{
+  .icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+  }
+
+  .icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+  }
+
+  .icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+  }
+
+  .active {
+    background-color: #4CAF50; /* Add an active/current color */
+  }
 }
 
 .header-headline {
+  padding-top: 70px;
   h1 {
     font-size: 56px;
     font-family: "poppins-medium", sans-serif;
@@ -94,9 +140,6 @@ $margin-promotion-sections-small: 15px;
   * Rules for when the device is detected to be a small screen.
   */
 @media (max-width: 720px) {
-  .header-section {
-  }
-
   .header-start,
   .homepage-bottom-start {
     margin: $margin-promotion-sections-small 0;
@@ -106,7 +149,4 @@ $margin-promotion-sections-small: 15px;
     margin: $margin-promotion-sections-small 0;
   }
 
-  .header-headline{
-    padding-top: 70px;
-  }
 }
