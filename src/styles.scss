@@ -6,6 +6,38 @@
 // Include material core styles.
 @include mat-core();
 
+$mat-cherryred: (
+  50 : #fae6e6,
+  100 : #f3c0c0,
+  200 : #ec9697,
+  300 : #e46b6d,
+  400 : #de4c4d,
+  500 : #d82c2e,
+  600 : #d42729,
+  700 : #ce2123,
+  800 : #c81b1d,
+  900 : #bf1012,
+  A100 : #ffeded,
+  A200 : #ffbabb,
+  A400 : #ff8788,
+  A700 : #ff6e6e,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
 
 $mat-brown: (
   50 : #e8e5e5,
@@ -74,7 +106,7 @@ $mat-wood: (
   )
 );
 //$primary: mat-palette($mat-indigo);
-$primary: mat-palette($mat-brown);
+$primary: mat-palette($mat-cherryred);
 
 $accent:  mat-palette($mat-wood, A200, A100, A400);
 
