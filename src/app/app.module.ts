@@ -19,6 +19,8 @@ import {SearchBarComponent} from './search-bar/search-bar.component';
 import {PageTitleComponent} from './page-title/page-title.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { TypingAnimationDirective } from 'angular-typing-animation'
+
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     SearchBarComponent,
     PageTitleComponent,
     AvatarComponent,
+    TypingAnimationDirective
   ],
   imports: [
     BrowserModule,

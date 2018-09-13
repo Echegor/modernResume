@@ -37,5 +37,9 @@
     i:hover {
       color: mat-color($primary, default-contrast);
     }
+
+    span {
+      color: mat-color($primary, default-contrast);
+    }
   }
 }
