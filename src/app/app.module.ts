@@ -19,7 +19,7 @@ import {SearchBarComponent} from './search-bar/search-bar.component';
 import {PageTitleComponent} from './page-title/page-title.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-import {AppTypingModule} from "./app-typing.module";
+import {TypingAnimationModule} from "angular-typing-animation";
 
 
 
@@ -45,7 +45,7 @@ import {AppTypingModule} from "./app-typing.module";
     AppMaterialModule,
     HttpClientModule,
     ScrollToModule.forRoot(),
-    AppTypingModule
+    TypingAnimationModule
   ],
   providers: [WineService,ContextualService],
   bootstrap: [AppComponent]
