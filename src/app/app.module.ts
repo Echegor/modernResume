@@ -19,7 +19,8 @@ import {SearchBarComponent} from './search-bar/search-bar.component';
 import {PageTitleComponent} from './page-title/page-title.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-import { TypingAnimationDirective } from 'angular-typing-animation'
+import {AppTypingModule} from "./app-typing.module";
+
 
 
 @NgModule({
@@ -34,7 +35,6 @@ import { TypingAnimationDirective } from 'angular-typing-animation'
     SearchBarComponent,
     PageTitleComponent,
     AvatarComponent,
-    TypingAnimationDirective
   ],
   imports: [
     BrowserModule,
@@ -44,7 +44,8 @@ import { TypingAnimationDirective } from 'angular-typing-animation'
     CdkTreeModule,
     AppMaterialModule,
     HttpClientModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    AppTypingModule
   ],
   providers: [WineService,ContextualService],
   bootstrap: [AppComponent]
