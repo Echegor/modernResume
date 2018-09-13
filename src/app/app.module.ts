@@ -20,6 +20,8 @@ import {PageTitleComponent} from './page-title/page-title.component';
 import { AvatarComponent } from './avatar/avatar.component';
 
 
+// @ts-ignore
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,10 +42,10 @@ import { AvatarComponent } from './avatar/avatar.component';
     CdkTableModule,
     CdkTreeModule,
     AppMaterialModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [WineService,ContextualService],
   bootstrap: [AppComponent]
 })
-export class AppModule {
+export class MainAppModule {
 }

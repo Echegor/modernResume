@@ -1,4 +1,8 @@
 img {
   border-radius: 50%;
   border: 5px solid gray;
+  box-shadow: 6px 0 15px -4px rgba(0, 0, 0, 0.8), -6px 0 8px -4px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 6px 0 15px -4px rgba(0, 0, 0, 0.8), -6px 0 8px -4px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 6px 0 15px -4px rgba(0, 0, 0, 0.87), -6px 0 8px -4px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: 6px 0 15px -4px rgba(0, 0, 0, 0.8), -6px 0 8px -4px rgba(0, 0, 0, 0.8);
 }
