@@ -18,10 +18,8 @@ import {ContactComponent} from './contact/contact.component';
 import {SearchBarComponent} from './search-bar/search-bar.component';
 import {PageTitleComponent} from './page-title/page-title.component';
 import { AvatarComponent } from './avatar/avatar.component';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
-
-// @ts-ignore
-// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,9 +41,11 @@ import { AvatarComponent } from './avatar/avatar.component';
     CdkTreeModule,
     AppMaterialModule,
     HttpClientModule,
+    ScrollToModule.forRoot()
   ],
   providers: [WineService,ContextualService],
   bootstrap: [AppComponent]
 })
+/*TODO: Renamed this to avoid TSLint issue caused by including node_modules in project*/
 export class MainAppModule {
 }

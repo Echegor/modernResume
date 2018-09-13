@@ -1,14 +1,14 @@
-<nav class="navbar-header">
+<nav #home class="navbar-header">
   <div class="navbar-show-small">
     <button (click)="rotate()" [@rotatedState]='state' class="app-nav-menu-button" mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu" yPosition="below" [overlapTrigger]="false" (close)="rotate()">
-      <button mat-menu-item>
+      <button [ngx-scroll-to]="'home'" mat-menu-item>
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </button>
-      <button mat-menu-item>
+      <button [ngx-scroll-to]="'resume'" mat-menu-item>
         <mat-icon>school</mat-icon>
         <span>Education</span>
       </button>
@@ -33,13 +33,13 @@
     <i class="material-icons nav-icon">
       home
     </i>
-    <a mat-button class="app-button" routerLink="home">Home</a>
+    <a mat-button [ngx-scroll-to]="'home'" class="app-button">Home</a>
   </div>
   <div class="navbar-hide-small">
     <i class="material-icons nav-icon">
       school
     </i>
-    <a mat-button class="app-button" routerLink="education">Education</a>
+    <a mat-button class="app-button" [ngx-scroll-to]="'resume'" routerLink="education">Education</a>
   </div>
   <div class="navbar-hide-small">
     <i class="material-icons nav-icon">
