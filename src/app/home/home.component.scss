@@ -1,6 +1,6 @@
 // The margin between two sections
-$margin-promotion-sections: 60px;
-$margin-promotion-sections-small: 15px;
+$margin-sections: 60px;
+$margin-sections-small: 15px;
 .social i{
   padding: 10px;
   font-size: 26px;
@@ -48,7 +48,7 @@ $margin-promotion-sections-small: 15px;
   h1 {
     font-size: 56px;
     font-family: "poppins-medium", sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     line-height: 56px;
     margin: 15px 5px;
   }
@@ -61,75 +61,12 @@ $margin-promotion-sections-small: 15px;
   }
 }
 
-.homepage-promo {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
 
-  h2 {
-    font-size: 25px;
-    font-weight: 400;
-    margin: 0 0 16px 0;
-    padding: 0;
-  }
-
-  p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0 0 24px 0;
-    padding: 0;
-  }
-}
-
-
-.homepage-row {
-  display: flex;
-  max-width: 920px;
-}
-
-.homepage-row .wine-svg-image{
-  max-width: 90%;
-}
-
-.homepage-reverse-row {
-  flex-direction: row-reverse;
-}
-
-.header-start,
-.homepage-bottom-start {
-  text-align: center;
-}
-
-.homepage-promo-img,
-.homepage-promo-desc {
-  width: 50%;
-}
-
-.homepage-promo-img {
-  text-align: center;
-}
-
-.homepage-promo-desc {
-  line-height: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 
 /**
   * Rules for when the device is detected to be a small screen.
   */
 @media (max-width: 720px) {
-  .header-start,
-  .homepage-bottom-start {
-    margin: $margin-promotion-sections-small 0;
-  }
-
-  .homepage-row {
-    margin: $margin-promotion-sections-small 0;
-  }
 
 }

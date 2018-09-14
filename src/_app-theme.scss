@@ -3,7 +3,7 @@
 @import "./app/home/homepage-theme";
 @import "./app/search-bar/searchbar-theme";
 @import "./app/page-title/pagetitle-theme";
-
+@import "./app/education/education-theme";
 
 
 
@@ -64,4 +64,5 @@
   @include home-page-theme($theme);
   @include nav-bar-theme($theme);
   @include search-bar-theme($theme);
+  @include education-page-theme($theme);
 }

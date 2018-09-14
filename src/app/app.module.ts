@@ -20,6 +20,10 @@ import {PageTitleComponent} from './page-title/page-title.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import {TypingAnimationModule} from "angular-typing-animation";
+import { EducationComponent } from './education/education.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 
@@ -35,6 +39,10 @@ import {TypingAnimationModule} from "angular-typing-animation";
     SearchBarComponent,
     PageTitleComponent,
     AvatarComponent,
+    EducationComponent,
+    SkillsComponent,
+    ExperienceComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,

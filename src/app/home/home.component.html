@@ -1,17 +1,17 @@
+//TODO maybe add card on subheading
 <header class="header-background">
   <div id="home" class="header-section">
     <div class="header-headline">
-      <h3 class="mat-h3">Welcome.</h3>
+      <h3 class="mat-h3">Welcome</h3>
       <app-avatar></app-avatar>
-      <h1 class="mat-h1">Luis Echegorri.</h1>
+      <h1 class="mat-h1">Luis Echegorri</h1>
     </div>
     <div class="star-light">
       <mat-icon>star</mat-icon>
     </div>
     <span class="mat-h2" typingAnimation [typeSpeed]="100" [hideCursorOnComplete]="false" [startDelay]="0" >
-    Software Developer - Leader - Swimmer.
+    Software Developer - Leader - Swimmer
     </span>
-
     <p class="social">
       <a href="" target="_blank"><i class="fa fa-github"></i></a>
       <a href="" target="_blank"><i class="fa fa-linkedin-square"></i></a>
@@ -19,59 +19,4 @@
     </p>
   </div>
 </header>
-
-<div id="resume" class="homepage-promo">
-  <div class="homepage-row">
-    <div class="homepage-promo-img">
-      <!--<docs-svg-viewer-->
-      <!--src="../assets/img/homepage/sprintzerotoapp.svg"-->
-      <!--scaleToContainer="true"></docs-svg-viewer>-->
-    </div>
-    <div class="homepage-promo-desc">
-      <h2>Sprint from Zero to App</h2>
-      <p>Hit the ground running with comprehensive, modern UI components that work across
-        the web, mobile and desktop.</p>
-    </div>
-  </div>
-  <div class="homepage-row homepage-reverse-row">
-    <div class="homepage-promo-img">
-      <!--<docs-svg-viewer-->
-      <!--src="../assets/img/homepage/fastandconsistent.svg"-->
-      <!--scaleToContainer="true"></docs-svg-viewer>-->
-    </div>
-    <div class="homepage-promo-desc">
-      <h2>Fast and Consistent</h2>
-      <p>Finely tuned performance, because every millisecond counts. Fully tested across
-        modern browsers.</p>
-    </div>
-  </div>
-  <div class="homepage-row">
-    <div class="homepage-promo-img">
-      <!--<docs-svg-viewer-->
-      <!--src="../assets/img/homepage/versatile.svg"-->
-      <!--scaleToContainer="true"></docs-svg-viewer>-->
-    </div>
-    <div class="homepage-promo-desc">
-      <h2>Versatile</h2>
-      <p>Themable, for when you need to stay on brand or just have a favorite color.
-        Accessible and internationalized so that all users are welcome.</p>
-    </div>
-  </div>
-  <div class="homepage-row homepage-reverse-row">
-    <div class="homepage-promo-img">
-      <!--<docs-svg-viewer-->
-      <!--src="../assets/img/homepage/optimized.svg"-->
-      <!--scaleToContainer="true"></docs-svg-viewer>-->
-    </div>
-    <div class="homepage-promo-desc">
-      <h2>Optimized for Angular</h2>
-      <p>Built by the Angular team to integrate seamlessly with Angular.</p>
-    </div>
-  </div>
-  <div class="homepage-bottom-start">
-    <a mat-raised-button class="docs-button" routerLink="/guide/getting-started">Get started</a>
-  </div>
-</div>
-<div id="destination">
-  You've reached your destination.
-</div>
+<app-education id="education"></app-education>
