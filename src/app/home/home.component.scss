@@ -36,6 +36,8 @@ $margin-promotion-sections-small: 15px;
   justify-content: center;
   padding-left: 3px;
   padding-right: 3px;
+  height: 100vh;
+  min-height: 750px;
   //height: 100vh; //removed as it did not play nice in different backgrounds
   //background: #ffffff url("../../assets/images/dark_wood.jpg");
 }
