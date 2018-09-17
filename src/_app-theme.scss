@@ -4,11 +4,12 @@
 @import "./app/search-bar/searchbar-theme";
 @import "./app/page-title/pagetitle-theme";
 @import "./app/education/education-theme";
+@import "./app/scrolltop/scrollTop-theme";
 
 
 
 // Styles for the docs app that are based on the current theme.
-@mixin wine-app-theme($theme) {
+@mixin resume-app-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
@@ -65,4 +66,5 @@
   @include nav-bar-theme($theme);
   @include search-bar-theme($theme);
   @include education-page-theme($theme);
+  @include scroll-top-theme($theme);
 }

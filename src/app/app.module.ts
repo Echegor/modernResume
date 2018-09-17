@@ -24,7 +24,7 @@ import { EducationComponent } from './education/education.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-
+import { ScrollTopComponent } from './scrolltop/scroll-top.component';
 
 
 @NgModule({
@@ -43,6 +43,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     SkillsComponent,
     ExperienceComponent,
     PortfolioComponent,
+    ScrollTopComponent,
   ],
   imports: [
     BrowserModule,

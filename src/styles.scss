@@ -112,4 +112,4 @@ $accent:  mat-palette($mat-wood, A200, A100, A400);
 
 $theme: mat-light-theme($primary, $accent);
 @include angular-material-theme($theme);
-@include wine-app-theme($theme);
+@include resume-app-theme($theme);
