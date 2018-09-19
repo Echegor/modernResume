@@ -41,18 +41,6 @@
   position: relative;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 23px;
-  left: 50%;
-  height: 99.5%;
-  width: 4px;
-  opacity: 0.3;
-  background: #06A763;
-}
-
 .timeline-section {
   position: relative;
 }
@@ -132,6 +120,7 @@
   z-index: -2;
   opacity: 0.4;
   background: #06A763;
+  display: none;
 }
 
 .timeline-section .timeline-content::after {
@@ -156,27 +145,19 @@
   color: inherit;
 }
 
-@media screen and (max-width: 768px) {
-  .timeline-section .timeline-content:before {
-    display: none;
-  }
-}
 
-/*
-.timeline-section .circle has the error
-*/
-@media only screen and (min-width: 768px) {
-  #timeline-education::before {
+@media screen and (min-width: 768px) {
+
+  .timeline-section .timeline-content::before {
+    display: block;
   }
+
   .timeline::before {
     left: 50%;
     margin-left: -2px;
     height: 69.1%;
     opacity: 0.4;
     background: #06A763;
-  }
-  .timeline-section {
-    //margin: -5em 0;
   }
   .timeline-section mat-card {
     margin: 0;
