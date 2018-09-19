@@ -9,7 +9,6 @@
 
   app-home {
     .education-background {
-      //background: mat-color($background,default-contrast);
       background: mat-color($accent);
     }
 
@@ -41,6 +40,24 @@
 
     span {
       color: mat-color($primary, default-contrast);
+    }
+
+    .timeline::before,.timeline-section .timeline-content::before {
+      background: mat-color($primary, darker);
+    }
+
+    .timeline-section mat-card .modal-dot:hover, .timeline-section mat-card .modal-dot:focus {
+      color: mat-color($primary, default-contrast);
+    }
+
+    .timeline-section .circle {
+      background: mat-color($primary, darker);
+      color: mat-color($primary, default-contrast);
+    }
+
+    .timeline-section .timeline-content {
+      background: mat-color($primary, default-contrast);
+      border-left: 5px solid mat-color($primary);
     }
   }
 }
