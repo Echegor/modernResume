@@ -61,6 +61,11 @@ $margin-sections-small: 15px;
   }
 }
 
+.home-section{
+  padding-top: 20px;
+  display: flex;
+}
+
 
 
 
@@ -68,5 +73,7 @@ $margin-sections-small: 15px;
   * Rules for when the device is detected to be a small screen.
   */
 @media (max-width: 720px) {
-
+  .home-section{
+    padding-top: 20px;
+  }
 }
