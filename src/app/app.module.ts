@@ -17,14 +17,17 @@ import {ShopComponent} from './shop/shop.component';
 import {ContactComponent} from './contact/contact.component';
 import {SearchBarComponent} from './search-bar/search-bar.component';
 import {PageTitleComponent} from './page-title/page-title.component';
-import { AvatarComponent } from './avatar/avatar.component';
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import {AvatarComponent} from './avatar/avatar.component';
+import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 import {TypingAnimationModule} from "angular-typing-animation";
-import { EducationComponent } from './education/education.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ScrollTopComponent } from './scrolltop/scroll-top.component';
+import {EducationComponent} from './education/education.component';
+import {SkillsComponent} from './skills/skills.component';
+import {ExperienceComponent} from './experience/experience.component';
+import {PortfolioComponent} from './portfolio/portfolio.component';
+import {ScrollTopComponent} from './scrolltop/scroll-top.component';
+import {MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule} from '@angular/material';
+import {LayoutModule} from '@angular/cdk/layout';
+import {NguCarouselModule} from "@ngu/carousel";
 
 
 @NgModule({
@@ -54,9 +57,16 @@ import { ScrollTopComponent } from './scrolltop/scroll-top.component';
     AppMaterialModule,
     HttpClientModule,
     ScrollToModule.forRoot(),
-    TypingAnimationModule
+    TypingAnimationModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule,
+    NguCarouselModule
   ],
-  providers: [WineService,ContextualService],
+  providers: [WineService, ContextualService],
   bootstrap: [AppComponent]
 })
 /*TODO: Renamed this to avoid TSLint issue caused by including node_modules in project*/
