@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {NguCarousel, NguCarouselConfig} from '@ngu/carousel';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {NguCarousel, NguCarouselConfig, NguCarouselStore} from '@ngu/carousel';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,8 +7,11 @@ import {NguCarousel, NguCarouselConfig} from '@ngu/carousel';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
+  private carouselToken: string;
+
   public carouselTileItems: Array<any>;
-  public carouselTile: NguCarousel;
+  public carouselTile: NguCarouselConfig;
+  @ViewChild('carousel') carousel: NguCarousel;
 
   constructor() { }
 
@@ -21,36 +24,24 @@ export class PortfolioComponent implements OnInit {
       speed: 400,
       animation: 'lazy',
       point: {
-        visible: true,
-        pointStyles: `
-          .ngucarouselPoint {
-            list-style-type: none;
-            text-align: center;
-            padding: 12px;
-            margin: 0;
-            white-space: nowrap;
-            overflow: auto;
-            box-sizing: border-box;
-          }
-          .ngucarouselPoint li {
-            display: inline-block;
-            border-radius: 50%;
-            border: 2px solid rgba(0, 0, 0, 0.55);
-            padding: 4px;
-            margin: 0 3px;
-            transition-timing-function: cubic-bezier(.17, .67, .83, .67);
-            transition: .4s;
-          }
-          .ngucarouselPoint li.active {
-              background: #6b6b6b;
-              transform: scale(1.2);
-          }
-        `
+        visible: true
       },
       load: 2,
       touch: true,
       easing: 'ease'
     }
+  }
+
+  initDataFn(key: NguCarouselStore) {
+    this.carouselToken = key.token;
+  }
+
+  resetFn() {
+    this.carousel.reset(this.carouselToken);
+  }
+
+  moveToSlide() {
+    this.carousel.moveToSlide(this.carouselToken, 2, false);
   }
 
   public carouselTileLoad(evt: any) {
@@ -61,7 +52,5 @@ export class PortfolioComponent implements OnInit {
         this.carouselTileItems.push(i);
       }
     }
-
-  }
 
 }
