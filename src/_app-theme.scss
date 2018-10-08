@@ -5,6 +5,7 @@
 @import "./app/page-title/pagetitle-theme";
 @import "./app/education/education-theme";
 @import "./app/scrolltop/scrollTop-theme";
+@import "./app/portfolio/portfolio-theme";
 
 
 
@@ -67,4 +68,5 @@
   @include search-bar-theme($theme);
   @include education-page-theme($theme);
   @include scroll-top-theme($theme);
+  @include portfolio-page-theme($theme);
 }

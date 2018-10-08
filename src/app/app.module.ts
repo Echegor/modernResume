@@ -28,6 +28,7 @@ import {ScrollTopComponent} from './scrolltop/scroll-top.component';
 import {MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule} from '@angular/material';
 import {LayoutModule} from '@angular/cdk/layout';
 import {NguCarouselModule} from "@ngu/carousel";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import {NguCarouselModule} from "@ngu/carousel";
     MatIconModule,
     MatButtonModule,
     LayoutModule,
+    FormsModule,
     NguCarouselModule
   ],
   providers: [WineService, ContextualService],
