@@ -1,6 +1,24 @@
+.carouselCard{
+  height: 600px;
+}
+
+.carouselCardContent{
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+
+img.image-loaded {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: auto;
+}
+
 ngu-carousel {
   width: 100%;
-  display: inline-table;
+  display: block;
 }
 
 .tile {
@@ -67,4 +85,72 @@ ngu-carousel {
 
 .myPoint li.active {
   transform: scale(1.2);
+}
+
+.portfolio-background {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin: 8px;
+  justify-content: center;
+  display: flex;
+  h1 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 56px;
+    margin: 15px 5px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    margin: 15px 0 25px 0;
+  }
+  mat-icon {
+    font-size: inherit;
+    padding-right: 1em;
+  }
+
+  mat-card{
+    width: 85%;
+    padding: 0;
+  }
+}
+
+
+/**
+  * Rules for when the device is detected to be a small screen.
+  */
+@media (max-width: 720px) {
+  .portfolio-header {
+    mat-icon {
+      font-size: 32px;
+      padding-right: 10px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+  }
+  ngu-tile{
+    justify-content: center;
+  }
+  ngu-carousel{
+    display: inline-block;
+  }
+
+  img.image-loaded {
+    max-width: 300px;
+    width: 40%;
+  }
+
+  .carouselCard{
+    height: 475px;
+  }
+
 }
