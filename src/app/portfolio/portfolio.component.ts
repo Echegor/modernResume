@@ -24,11 +24,10 @@ export class PortfolioComponent implements AfterViewInit {
     {
       title: 'Mobile Override Manager',
       subtitle: 'Wakefern Food Corp.',
-      content: 'Application designed to facilitate ShopRite\'s front end eciency. The application ' +
-        'allows for a front end manager, who holds an Android application, and cashiers, who are sitting at a terminal, to ' +
-        'exchange messages as well as to request services from each other. It also allows for managers to monitor cashiers ' +
-        ', to interact with the transaction itself, to perform manager overrides ' +
-        'remotely. The mobile override manager project saved Wakefern around 40 labor hours per week per store.',
+      content: 'Application allows for a front end manager, who holds an Android application, and cashiers, who ' +
+        'are sitting at a terminal, to exchange messages, for managers to monitor cashiers, managers interact with the ' +
+        'transaction itself, to perform manager, and perform overrides remotely. The mobile override manager project ' +
+        'saves Wakefern around 40 labor hours per week per store.',
       images: ['../../assets/images/mom/mom_login.png','../../assets/images/mom/mom_main.png','../../assets/images/mom/mom_more.png'],
     },
     {
