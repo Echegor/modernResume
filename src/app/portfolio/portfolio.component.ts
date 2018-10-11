@@ -15,7 +15,7 @@ export class PortfolioComponent implements AfterViewInit {
   carouselConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 2, md: 3, lg: 4, all: 0 },
     load: 3,
-    interval: {timing: 4000, initialDelay: 1000},
+    interval: {timing: 4000, initialDelay: 4000},
     loop: true,
     touch: true,
     velocity: 0.2

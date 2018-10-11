@@ -1,3 +1,72 @@
-<p>
-  contact works!
-</p>
+<div class="contact-background mat-elevation-z6">
+  <div class="contact-header">
+    <mat-card>
+      <h1 class="mat-h1">
+        <mat-icon>contact_mail</mat-icon>
+        Contact
+      </h1>
+    </mat-card>
+  </div>
+  <mat-card class="stepper">
+    <mat-vertical-stepper [linear]="isLinear" #stepper>
+      <mat-step [stepControl]="nameFormGroup">
+        <form [formGroup]="nameFormGroup">
+          <ng-template matStepLabel>Fill out your name</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Last name, First name" formControlName="nameControl" required>
+          </mat-form-field>
+          <div>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="emailFormGroup">
+        <form [formGroup]="emailFormGroup">
+          <ng-template matStepLabel>Fill out your email address</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Email Address" formControlName="emailControl" required>
+          </mat-form-field>
+          <div>
+            <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="subjectFormGroup">
+        <form [formGroup]="subjectFormGroup">
+          <ng-template matStepLabel>Enter your subject</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Subject" formControlName="subjectControl" required>
+          </mat-form-field>
+          <div>
+            <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="contentFormGroup">
+        <form [formGroup]="contentFormGroup">
+          <ng-template matStepLabel>Type email content</ng-template>
+          <mat-form-field>
+            <textarea matInput placeholder="Email content" formControlName="contentControl" required></textarea>
+            <!--<input matInput placeholder="Email content" formControlName="contentControl" required>-->
+          </mat-form-field>
+          <div>
+            <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Send email</ng-template>
+        You are now done.
+        <div>
+          <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+          <button mat-raised-button color="primary" (click)="stepper.reset()">Send</button>
+        </div>
+      </mat-step>
+    </mat-vertical-stepper>
+  </mat-card>
+</div>
+
+<!--TODO snackbar on send email. Preview of email on send-->
