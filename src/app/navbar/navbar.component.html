@@ -9,19 +9,19 @@
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </button>
-      <button [ngx-scroll-to]="'education'" mat-menu-item>
+      <button [ngx-scroll-to]="'experience'" mat-menu-item>
         <mat-icon>school</mat-icon>
         <span>Experience</span>
       </button>
-      <button mat-menu-item>
+      <button [ngx-scroll-to]="'portfolio'" mat-menu-item>
         <mat-icon>person</mat-icon>
         <span>Portfolio</span>
       </button>
-      <button mat-menu-item>
+      <button [ngx-scroll-to]="'skills'" mat-menu-item>
         <mat-icon>library_books</mat-icon>
         <span>Skills</span>
       </button>
-      <button mat-menu-item>
+      <button [ngx-scroll-to]="'contact'" mat-menu-item>
         <mat-icon>contact_mail</mat-icon>
         <span>Contact</span>
       </button>
@@ -40,24 +40,24 @@
     <i class="material-icons nav-icon">
       school
     </i>
-    <a mat-button class="app-button" [ngx-scroll-to]="'education'">Experience</a>
+    <a mat-button class="app-button" [ngx-scroll-to]="'experience'">Experience</a>
   </div>
   <div class="navbar-hide-small">
     <i class="material-icons nav-icon">
       person
     </i>
-    <a mat-button class="navbar-hide-small app-button">Portfolio</a>
+    <a mat-button [ngx-scroll-to]="'portfolio'" class="navbar-hide-small app-button">Portfolio</a>
   </div>
   <div class="navbar-hide-small">
     <i class="material-icons nav-icon">
       library_books
     </i>
-    <a mat-button class="app-button">Skills</a>
+    <a mat-button [ngx-scroll-to]="'skills'" class="app-button">Skills</a>
   </div>
   <div class="navbar-hide-small">
     <i class="material-icons nav-icon">
       contact_mail
     </i>
-    <a mat-button class="navbar-hide-small app-button">Contact</a>
+    <a mat-button [ngx-scroll-to]="'contact'" class="navbar-hide-small app-button">Contact</a>
   </div>
 </nav>
