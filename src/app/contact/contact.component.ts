@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {HttpClient, HttpParams} from "@angular/common/http";
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +13,11 @@ export class ContactComponent implements OnInit {
   emailFormGroup: FormGroup;
   subjectFormGroup: FormGroup;
   contentFormGroup: FormGroup;
-  constructor(private _formBuilder: FormBuilder) { }
+
+  private api_url = 'https://luis-echegorri.herokuapp.com/email';
+
+  constructor(private _formBuilder: FormBuilder, private http: HttpClient) {
+  }
 
   ngOnInit() {
     this.nameFormGroup = this._formBuilder.group({
@@ -26,6 +31,23 @@ export class ContactComponent implements OnInit {
     });
     this.contentFormGroup = this._formBuilder.group({
       contentControl: ['', Validators.required]
+    });
+  }
+
+  sendEmail() {
+    let params = new HttpParams();
+    params.set(
+      'name', this.nameFormGroup.getRawValue()
+    ).set(
+      'theirEmail', this.nameFormGroup.getRawValue()
+    ).set(
+      'subject', this.subjectFormGroup.getRawValue()
+    ).set(
+      'content', this.contentFormGroup.getRawValue()
+    );
+
+    this.http.get(this.api_url, {params: params}).subscribe(result => {
+      console.log("Received result %o", result);
     });
   }
 

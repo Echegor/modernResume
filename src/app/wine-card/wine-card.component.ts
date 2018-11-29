@@ -42,7 +42,7 @@ export class WineCardComponent implements OnInit {
       });
     }
     else {
-      this.getWineImage(this.winePage._embedded.wines[this.pageIndex%20].title);
+      this.getWineImage(this.winePage._embedded.wines[this.pageIndex % 20].title);
     }
   }
 
@@ -54,7 +54,7 @@ export class WineCardComponent implements OnInit {
     this.winePage = winePage;
     console.log("current page: %o", this.winePage._embedded.wines[0]);
     this.length = this.winePage.page.totalPages;
-    this.getWineImage(this.winePage._embedded.wines[this.pageIndex%20].title);
+    this.getWineImage(this.winePage._embedded.wines[this.pageIndex % 20].title);
   }
 
   getWinePage(): void {
