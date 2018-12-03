@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HttpClient, HttpParams} from "@angular/common/http";
+import {EmailService} from "../email.service";
+import {Email} from "../data/email";
 
 @Component({
   selector: 'app-contact',
@@ -14,9 +16,10 @@ export class ContactComponent implements OnInit {
   subjectFormGroup: FormGroup;
   contentFormGroup: FormGroup;
 
-  private api_url = 'https://luis-echegorri.herokuapp.com/email';
+  // private api_url = 'https://luis-echegorri.herokuapp.com/email';
+  private api_url = '/email';
 
-  constructor(private _formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(private _formBuilder: FormBuilder, private emailService: EmailService) {
   }
 
   ngOnInit() {
@@ -35,20 +38,15 @@ export class ContactComponent implements OnInit {
   }
 
   sendEmail() {
-    let params = new HttpParams();
-    params.set(
-      'name', this.nameFormGroup.getRawValue()
-    ).set(
-      'theirEmail', this.nameFormGroup.getRawValue()
-    ).set(
-      'subject', this.subjectFormGroup.getRawValue()
-    ).set(
-      'content', this.contentFormGroup.getRawValue()
-    );
-
-    this.http.get(this.api_url, {params: params}).subscribe(result => {
-      console.log("Received result %o", result);
-    });
+    let email: Email = new Email();
+    console.log("form value %o",this.nameFormGroup.get('nameControl').value);
+    email.name = this.nameFormGroup.get('nameControl').value;
+    email.theirEmail = this.emailFormGroup.get('emailControl').value;
+    email.subject = this.subjectFormGroup.get('subjectControl').value;
+    email.content = this.contentFormGroup.get('contentControl').value;
+    this.emailService.sendEmail(email).subscribe((event) => {
+      console.log("Received from sendEmail service %o",event);
+    })
   }
 
 }
