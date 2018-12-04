@@ -8,12 +8,12 @@
     </mat-card>
   </div>
   <mat-card class="stepper">
-    <mat-vertical-stepper [linear]="isLinear" #stepper>
+    <mat-vertical-stepper (selectionChange)="onChange($event)" [linear]="isLinear" #stepper>
       <mat-step [stepControl]="nameFormGroup">
         <form [formGroup]="nameFormGroup">
           <ng-template matStepLabel>Fill out your name</ng-template>
           <mat-form-field>
-            <input matInput placeholder="Last name, First name" formControlName="nameControl"  required>
+            <input id="input0" matInput placeholder="Last name, First name" formControlName="nameControl"  required>
           </mat-form-field>
           <div>
             <button mat-raised-button color="primary" matStepperNext>Next</button>
@@ -24,10 +24,10 @@
         <form [formGroup]="emailFormGroup">
           <ng-template matStepLabel>Fill out your email address</ng-template>
           <mat-form-field>
-            <input matInput placeholder="Email Address" formControlName="emailControl" required>
+            <input id="input1" matInput placeholder="Email Address" formControlName="emailControl" required>
           </mat-form-field>
           <div>
-            <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+            <!--<button mat-raised-button color="primary" matStepperPrevious>Back</button>-->
             <button mat-raised-button color="primary" matStepperNext>Next</button>
           </div>
         </form>
@@ -36,10 +36,10 @@
         <form [formGroup]="subjectFormGroup">
           <ng-template matStepLabel>Enter your subject</ng-template>
           <mat-form-field>
-            <input matInput placeholder="Subject" formControlName="subjectControl" required>
+            <input id="input2" matInput placeholder="Subject" formControlName="subjectControl" required>
           </mat-form-field>
           <div>
-            <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+            <!--<button mat-raised-button color="primary" matStepperPrevious>Back</button>-->
             <button mat-raised-button color="primary" matStepperNext>Next</button>
           </div>
         </form>
@@ -48,22 +48,22 @@
         <form [formGroup]="contentFormGroup">
           <ng-template matStepLabel>Type email content</ng-template>
           <mat-form-field>
-            <textarea matInput placeholder="Email content" formControlName="contentControl" required></textarea>
+            <textarea id="input3" matInput placeholder="Email content" formControlName="contentControl" required></textarea>
           </mat-form-field>
           <div>
-            <button mat-raised-button color="primary" matStepperPrevious>Back</button>
-            <button mat-raised-button color="primary" matStepperNext>Next</button>
+            <!--<button mat-raised-button color="primary" matStepperPrevious>Back</button>-->
+            <button mat-raised-button color="primary" (click)="sendPressed()">Send</button>
           </div>
         </form>
       </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>Send email</ng-template>
-        Send Email?
-        <div>
-          <button mat-raised-button color="primary" matStepperPrevious>Back</button>
-          <button mat-raised-button color="primary" (click)="sendPressed()">Send</button>
-        </div>
-      </mat-step>
+      <!--<mat-step>-->
+        <!--<ng-template matStepLabel>Send email</ng-template>-->
+        <!--Send Email?-->
+        <!--<div>-->
+          <!--&lt;!&ndash;<button mat-raised-button color="primary" matStepperPrevious>Back</button>&ndash;&gt;-->
+          <!--<button mat-raised-button color="primary" (click)="sendPressed()">Send</button>-->
+        <!--</div>-->
+      <!--</mat-step>-->
     </mat-vertical-stepper>
   </mat-card>
 </div>

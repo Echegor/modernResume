@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {EmailService} from "../email.service";
@@ -11,12 +11,13 @@ import {DialogComponent} from "../dialog/dialog.component";
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, AfterViewInit {
   isLinear = true;
   nameFormGroup: FormGroup;
   emailFormGroup: FormGroup;
   subjectFormGroup: FormGroup;
   contentFormGroup: FormGroup;
+  public targetInput = 'input0';
 
   constructor(
     private _formBuilder: FormBuilder,
@@ -61,7 +62,8 @@ export class ContactComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogComponent, {
       data: {
         title: 'Email',
-        message: 'Are you sure you want to send this email? I will receive and email and you will be cc\'d on it',
+        question: 'Are you sure you want to send this email?',
+        message: 'An email conversation will be started between you and me.',
         yesMessage: 'Yes' ,
         noMessage: 'No'
       }
@@ -73,5 +75,26 @@ export class ContactComponent implements OnInit {
         this.sendEmail();
       }
     });
+  }
+
+  ngAfterViewInit() {
+    this.setFocus();
+  }
+
+  private setFocus() {
+    let targetElem = document.getElementById(this.targetInput);
+    setTimeout(function waitTargetElem() {
+      if (document.body.contains(targetElem)) {
+        targetElem.focus();
+      } else {
+        setTimeout(waitTargetElem, 100);
+      }
+    }, 100);
+  }
+
+  onChange(event: any) {
+    let index = String(event.selectedIndex);
+    this.targetInput = 'input' + index;
+    this.setFocus();
   }
 }
