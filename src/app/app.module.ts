@@ -29,7 +29,7 @@ import {MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButto
 import {LayoutModule} from '@angular/cdk/layout';
 import {NguCarouselModule} from "@ngu/carousel";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { DialogComponent } from './dialog/dialog.component';
+import {DialogComponent} from './dialog/dialog.component';
 
 
 @NgModule({

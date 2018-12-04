@@ -11,7 +11,7 @@ import {DialogComponent} from "../dialog/dialog.component";
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit, AfterViewInit {
+export class ContactComponent implements OnInit {
   isLinear = true;
   nameFormGroup: FormGroup;
   emailFormGroup: FormGroup;
@@ -77,9 +77,6 @@ export class ContactComponent implements OnInit, AfterViewInit {
     });
   }
 
-  ngAfterViewInit() {
-    this.setFocus();
-  }
 
   private setFocus() {
     let targetElem = document.getElementById(this.targetInput);
