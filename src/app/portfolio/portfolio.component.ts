@@ -46,10 +46,10 @@ export class PortfolioComponent implements AfterViewInit {
       images: ['../../assets/images/hourtracker/hourtrackermain.png'],
     },
     {
-      title: 'ShopRite Coupon Application:',
+      title: 'Coupon Application:',
       subtitle: 'Personal',
       content: 'Built a personal application in order to make the coupon clipping process easier.',
-      images: ['../../assets/images/ShopRiteCoupons/ShopriteCoupons1.jpg','../../assets/images/ShopRiteCoupons/ShopriteCoupons2.jpg'],
+      images: ['https://luis-echegorri.herokuapp.com/assets/images/coupon/image1.png','https://luis-echegorri.herokuapp.com/assets/images/coupon/image2.png'],
     },
   ];
 
