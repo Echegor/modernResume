@@ -3,6 +3,8 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {EmailService} from "../email.service";
 import {Email} from "../data/email";
+import {MatDialog, MatSnackBar} from "@angular/material";
+import {DialogComponent} from "../dialog/dialog.component";
 
 @Component({
   selector: 'app-contact',
@@ -16,10 +18,11 @@ export class ContactComponent implements OnInit {
   subjectFormGroup: FormGroup;
   contentFormGroup: FormGroup;
 
-  // private api_url = 'https://luis-echegorri.herokuapp.com/email';
-  private api_url = '/email';
-
-  constructor(private _formBuilder: FormBuilder, private emailService: EmailService) {
+  constructor(
+    private _formBuilder: FormBuilder,
+    private emailService: EmailService,
+    public snackBar: MatSnackBar,
+    public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -39,14 +42,36 @@ export class ContactComponent implements OnInit {
 
   sendEmail() {
     let email: Email = new Email();
-    console.log("form value %o",this.nameFormGroup.get('nameControl').value);
+    console.log("form value %o", this.nameFormGroup.get('nameControl').value);
     email.name = this.nameFormGroup.get('nameControl').value;
     email.theirEmail = this.emailFormGroup.get('emailControl').value;
     email.subject = this.subjectFormGroup.get('subjectControl').value;
     email.content = this.contentFormGroup.get('contentControl').value;
     this.emailService.sendEmail(email).subscribe((event) => {
-      console.log("Received from sendEmail service %o",event);
+      console.log("Received from sendEmail service %o", event);
+      this.snackBar.open(
+        'Email sent!',
+        '',
+        {duration: 1000}
+      );
     })
   }
 
+  sendPressed() {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      data: {
+        title: 'Email',
+        message: 'Are you sure you want to send this email? I will receive and email and you will be cc\'d on it',
+        yesMessage: 'Yes' ,
+        noMessage: 'No'
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      //console.log('The dialog was closed with result ' + result);
+      if(result){
+        this.sendEmail();
+      }
+    });
+  }
 }

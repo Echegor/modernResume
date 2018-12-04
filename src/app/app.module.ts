@@ -29,6 +29,7 @@ import {MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButto
 import {LayoutModule} from '@angular/cdk/layout';
 import {NguCarouselModule} from "@ngu/carousel";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { DialogComponent } from './dialog/dialog.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     ExperienceComponent,
     PortfolioComponent,
     ScrollTopComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +72,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     ReactiveFormsModule
   ],
   providers: [WineService, ContextualService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogComponent]
 })
 /*TODO: Renamed this to avoid TSLint issue caused by including node_modules in project*/
 export class MainAppModule {
